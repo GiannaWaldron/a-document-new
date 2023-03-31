@@ -1,28 +1,66 @@
 body {
-  font-family: sans-serif;
-  background: lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+  background: goldenrod;
 }
-
+h1 {
+  font-size: 48px;
+  margin:0;
+  text-align: center;
+}
 h2 {
   break-before: page;
+  position: relative;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
 }
-
+h3 {
+  margin: 0;
+  font-size: 120px;
+  text-align: center;
+}
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  text-align: justify;
+  margin-left: .48in;
+  line-height: 15px;
+  margin-right: .48in;
+  kerning: 7px;
+}
+figure {
+  margin: 0;
+  padding: .20px;
+  text-align: center;
+}
+figure img {
+  width: 75%;
+}
 @media print {
   body {
     background: white;
   }
+  h2 {
+    position: relative;
+    position: center;
+  }
 }
-
 @page {
-  size: 5in 8in;
-  margin-top: 0.25in;
+  size: 4.75in 8in;
+  margin-top: 0.5in;
   margin-bottom: 0.5in;
+  bleed: 0.25;
+  marks: crop;
+  @bottom-center{
+    content: counter(page);
+    font-size: 9px;
+  }
 }
 @page:left {
   margin-left: 0.25in;
-  margin-right: 1in;
+  margin-right: 0.75in;
 }
 @page:right {
-  margin-left: 1in;
+  margin-left: 0.75in;
   margin-right: 0.25in;
 }
