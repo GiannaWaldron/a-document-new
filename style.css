@@ -1,7 +1,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: goldenrod;
+  background-image: radial-gradient(cyan 0%, transparent 20%, salmon 40%);
 }
+
 h1 {
   font-size: 48px;
   margin:0;
@@ -49,7 +50,7 @@ figure img {
   size: 4.75in 8in;
   margin-top: 0.5in;
   margin-bottom: 0.5in;
-  bleed: 0.25;
+  bleed: 0.25in;
   marks: crop;
   @bottom-center{
     content: counter(page);
@@ -63,4 +64,7 @@ figure img {
 @page:right {
   margin-left: 0.75in;
   margin-right: 0.25in;
+}
+#grad {
+  background-image: linear-gradient(to top right, red, yellow);
 }
